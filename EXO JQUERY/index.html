@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xercice</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <h1>COURS JQUERY</h1>
+    <!-- <h2>Exercice 1 : Animer par un déplacement de 50 px une div de gauche à droite puis de droite à gauche.</h2>  
+    <div id="div1"></div>
+    <button id="exercice1">Animer l'élément</button> -->
+    <!-- <br>
+     -->
+    <!-- <h2>Exercice 2 : Animer 2 divs sur 3 avec la méthode .slideToggle(), créer un bouton qui change la couleur des 2 divs animées en utilisant <br>
+        la méthode toggleClass().</h2>
+    <div class="div2"></div>
+    <div class="div3"></div>
+    <div class="div4"></div>
+    <button id="exercice2">Animer l'élément</button> -->
+
+    <!-- <h2>Exercice 3 : Animer un élement "box" en changeant sa hauteur et sa largeur puis réinitialiser.</h2> 
+    <div id="div5"></div>
+    <button id="exercice3">Animer l'élément</button> -->
+    
+    <!-- <h2>Exercice 4 : Faire apparaître ou disparaître un élément en 3 secondes en utilisant .fadeIn() et .fadeOut().</h2>  
+    <div id="div6"></div>
+    <button id="exercice4">Animer l'élément</button> -->
+
+    <!-- <h2>Exercice 5 : Faire apparaître ou disparaître un élément avec un intervalle d'une seconde en utilisant setInterval().</h2>  
+    <div id="div7"></div>
+    <button id="exercice5">Animer l'élément</button> -->
+
+    <!-- <h2>Exercice 6 : Faire apparaître ou disparaître un élément avec l'effet "Toggle" après l'avoir activé ou déactivé en utilisant .fx.off.</h2> 
+    <div id="div8"></div>
+    <button id="exo6Disable">jQuery.fx.off = true ( Disable )</button>
+    <button id="exo6Enable">jQuery.fx.off = false ( Enable )</button>
+    <br><br>
+correction du prof
+exo1
+<div class="block"></div>
+<button id="left"><-</button>
+<button id="right">-></button>
+<button id="top">⇑</button>
+<button id="bottom">⇓</button>
+
+exo2
+ <div id="div1"></div>
+<div id="div2"></div>
+<div id="div3"></div>
+exo3
+<button id="button1">Cliquez pour voir l'effet</button> 
+<button id="btn1">Animer hauteur & largeur</button>
+<button id="btn2">Réinitialiser</button>
+<div id="box"></div> 
+
+
+
+    <button id="exo6Toggle">Toggle animation</button> -->
+    <!-- <button id="start">
+    slidetoggle</button><br>
+    <br>
+    <br>
+    
+    
+    
+    <div id="div2">
+        
+    </div>
+    <div id=div3>
+        
+    </div> -->
+    
+    
+    
+    
+    <script src="JS/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.js"></script>
+
+        <script>
+//             $("#exercice1").click(function(){
+//         $("#div1").animate({left: "+=200px"},5000
+//         ).queue(function() {
+//                 $(this).dequeue();
+//         }).animate({left: "-=200px"},5000);
+// $("#exercice2").click(function(){
+//         $(".div2").toggleClass("bgNouveau");
+//         $(".div2").slideToggle(2000);
+//         $(".div3").toggleClass("bgNouveau");
+//         $(".div3").slideToggle(2000);
+           
+//         $("#exercice3").click(function(){
+//         $("#div5").animate({height: "200px", opacity: '0.4'},"slow");
+//         $("#div5").animate({width: "200px", opacity: '0.4'},"slow");
+//         $("#div5").animate({height: "50px", opacity: '0.4'},"slow");
+//         $("#div5").animate({width: "50px", opacity: '0.4'},"slow");
+//         $("#div5").animate({opacity: '1'},"slow");
+
+//           $("#exercice4").click(function(){
+//          $("#div6").fadeOut(3000
+//          ).queue(function() {
+//                 $(this).dequeue();
+//          }).fadeIn(3000);
+
+           
+        //  $("#exercice5").click(function(){
+        // setInterval(function(){ 
+        //         $("#div7").fadeOut(
+        //         ).queue(function() {
+        //                 $(this).dequeue();
+        //                 }).fadeIn();
+        // }, 1000);
+        //  });
+    //     $("#exo6Disable").click(function(){
+    //     jQuery.fx.off = true;
+    //    });
+    //   $("#exo6Enable").click(function(){
+    //     jQuery.fx.off = false;
+    //   });
+    //   $("#exo6Toggle").click(function(){
+    //     $("#div8").toggle("slow");
+    //  });
+          corection du prof
+
+          $("#left").click(function() {
+    $(".block").animate({ left: "-=50px" }, "slow");
+});
+$("#right").click(function() {
+    $(".block").animate({ left: "+=50px" }, "slow");
+});
+$("#top").click(function() {
+    $(".block").animate({ top: "-=50px" }, "slow");
+});
+$("#bottom").click(function() {
+    $(".block").animate({ top: "+=50px" }, "slow");
+});
+
+exo2
+$("button").click(function() {
+    $("div:animated").toggleClass("colored ");
+    //$(".divAnime").slideToggle(5000);
+});
+let animateIt = function() {
+    $("#div1,#div2").slideToggle("slow", animateIt);
+}
+
+animateIt();
+// });
+// });
+// });
+// });
+    //    $(function(){
+    //        $("button").click(function(){
+    //            $("div").slideToggle({left:"600px"},3000);
+    //        })
+    //    })
+    </script> -->
+   
+</body>
+</html>
